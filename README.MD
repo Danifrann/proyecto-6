@@ -10,6 +10,26 @@ Este proyecto es una API para gestionar productos y usuarios. Los usuarios puede
 - MongoDB
 - npm (Node Package Manager)
 
+## Modelos
+
+### User
+
+El modelo `User` define a los usuarios de la aplicación y contiene las siguientes propiedades:
+
+- `username` (String, requerido): Nombre de usuario.
+- `email` (String): Correo electrónico del usuario.
+- `password` (String, requerido): Contraseña del usuario.
+
+### Product
+
+El modelo `Product` define los productos que pueden ser creados por los usuarios y contiene las siguientes propiedades:
+
+- `name` (String, requerido): Nombre del producto.
+- `price` (Number, requerido): Precio del producto.
+- `description` (String): Descripción del producto.
+- `stock` (Number, por defecto 0): Cantidad en stock del producto.
+- `user` (ObjectId, referencia a `User`, requerido): Referencia al usuario que creó el producto.
+
 ## Uso
 
 ### Usuarios
