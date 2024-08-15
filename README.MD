@@ -46,3 +46,7 @@ El modelo `Product` define los productos que pueden ser creados por los usuarios
 - `api/product/readone`: No requiere autenticación para obtener un producto por ID.
 - `api/product/update`: Requiere autenticación para actualizar un producto por ID solo si es el creador del producto.
 - `api/product/delete`: Requiere autenticación para eliminar un producto por ID solo si es el creador del producto.
+
+## Render.com
+
+https://proyecto-6-94j0.onrender.com/
