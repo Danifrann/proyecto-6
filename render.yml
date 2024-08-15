@@ -1,0 +1,13 @@
+# render.yaml
+
+services:
+  - type: web
+    name: proyecto6
+    env: node
+    plan: starter
+    buildCommand: npm install
+    startCommand: npm start
+    autoDeploy: true
+    region: oregon
+    healthCheckPath: /api/product/readall
+
