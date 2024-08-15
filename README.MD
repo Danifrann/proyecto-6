@@ -1,6 +1,4 @@
-# Nombre del Proyecto
-
-Una breve descripción de lo que hace tu proyecto.
+# API de gestión de productos y usuarios con Node.js y MongoDB
 
 ## Descripción
 
