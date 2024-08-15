@@ -10,22 +10,19 @@ Este proyecto es una API para gestionar productos y usuarios. Los usuarios puede
 - MongoDB
 - npm (Node Package Manager)
 
-
 ## Uso
 
 ### Usuarios
 
-api/user/register
-api/user/login
-api/user/verifytoken, requiere autenticación para obtener el usuario
-api/user/update, requiere autenticación para actualizar el usuario
+- `api/user/register`: Registro de un nuevo usuario.
+- `api/user/login`: Inicio de sesión de un usuario.
+- `api/user/verifytoken`: Requiere autenticación para obtener la información del usuario.
+- `api/user/update`: Requiere autenticación para actualizar la información del usuario.
 
 ### Productos
 
-api/product/create, requiere autenticación para crear un producto
-api/product/readall, no requiere autenticación para obtener todos los productos
-api/product/readone, no requiere autenticación para obtener un producto por ID
-api/product/update, requiere autenticación para actualizar un producto por ID solo si es el creador del producto
-api/product/delete, requiere autenticación para eliminar un producto por ID solo si es el creador del producto
-
-
+- `api/product/create`: Requiere autenticación para crear un producto.
+- `api/product/readall`: No requiere autenticación para obtener todos los productos.
+- `api/product/readone`: No requiere autenticación para obtener un producto por ID.
+- `api/product/update`: Requiere autenticación para actualizar un producto por ID solo si es el creador del producto.
+- `api/product/delete`: Requiere autenticación para eliminar un producto por ID solo si es el creador del producto.
