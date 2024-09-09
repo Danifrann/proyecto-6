@@ -1,5 +1,6 @@
 const User = require('../models/User');
 const bcryptjs = require('bcryptjs');
+const jwt = require('jsonwebtoken');
 
 
 // Registrar un nuevo usuario
@@ -23,7 +24,9 @@ exports.registerUser = async (req, res) => {
 
 // Iniciar sesión de usuario
 exports.loginUser = async (req, res) => {
+    
     const {email, password} = req.body;
+    console.log(email, password);
     try {
         const user = await User.findOne({email});
         if (!user) {
@@ -34,12 +37,17 @@ exports.loginUser = async (req, res) => {
             return res.status(400).send('Contraseña incorrecta');
         }
 
+        
         const payload = { user: { id: user._id } };
+        console.log(payload)
         const token = jwt.sign(payload, process.env.SECRET, {
             expiresIn: 3600000
         });
+        console.log(token);
+        
         return res.json({token});
     } catch (error) {
+        console.log(error)
         res.status(500).send(error);
     }   
     

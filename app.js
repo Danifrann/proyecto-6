@@ -5,7 +5,6 @@ const userRoutes = require('./routes/Users');
 const app = express();
 const cors = require('cors');
 
-
 require('dotenv').config();
 
 // Conectar a la base de datos
@@ -20,6 +19,7 @@ app.use(cors());
 // Rutas
 app.use('/api/product', productRoutes); 
 app.use('/api/user', userRoutes); 
+
 
 // Iniciar el servidor
 const PORT = process.env.PORT || 3000;
